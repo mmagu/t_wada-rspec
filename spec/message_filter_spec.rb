@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'message_filter'
+require_relative '../lib/message_filter'
 
 describe MessageFilter do
 end
