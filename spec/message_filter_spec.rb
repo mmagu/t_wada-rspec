@@ -5,11 +5,11 @@ describe MessageFilter do
   before do
     @filter = MessageFilter.new('foo')
   end
-  it 'should detect message with NG word' do
+  it {
     @filter.detect?('hello from foo').should == true
-  end
+  }
 
-  it 'should not detect message without NG word' do
+  it {
     @filter.detect?('hello, world').should == false
-  end
+  }
 end
