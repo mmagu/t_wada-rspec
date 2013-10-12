@@ -6,10 +6,10 @@ describe MessageFilter, "with argument foo" do
     @filter = MessageFilter.new('foo')
   end
   it {
-    @filter.detect?('hello from foo').should == true
+    @filter.should be_detect('hello from foo')
   }
 
   it {
-    @filter.detect?('hello, world').should == false
+    @filter.should_not be_detect('hello, world')
   }
 end
